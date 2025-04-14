@@ -95,9 +95,9 @@
     <div class="container">
         <h1>🔢 Descubra algo incrível com um número!</h1>
         <select id="tipo">
-            <option value="trivia">Curiosidade</option>
-            <option value="math">Matemática</option>
             <option value="date">Data</option>
+            <option value="trivia">Curiosidade</option>
+            <option value="math">Matemática</option>            
             <option value="year">Ano</option>
             <option value="random">Aleatório</option>
         </select>
@@ -118,7 +118,7 @@
             resultadoDiv.style.opacity = 0;
 
             if (tipo === 'date') {
-                entradaInput.placeholder = "Ex: 20/02";
+                entradaInput.placeholder = "Ex: Dia/ano";
                 entradaInput.type = 'text';
                 entradaInput.disabled = false;
             } else if (tipo === 'year') {
