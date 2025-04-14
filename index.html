@@ -35,22 +35,6 @@
             max-width: 500px;
             width: 100%;
         }
-        .descricao {
-            font-size: 1rem;
-            margin-bottom: 20px;
-            color: #444;
-        }
-        .filtro {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-            justify-content: center;
-        }
-        .filtro label {
-            font-weight: bold;
-            font-size: 1rem;
-        }
         select, input, button {
             padding: 12px;
             margin: 10px 0;
@@ -79,6 +63,7 @@
             word-wrap: break-word;
         }
 
+        /* 📱 Smartphones */
         @media (max-width: 480px) {
             h1 {
                 font-size: 1.5rem;
@@ -95,6 +80,7 @@
             }
         }
 
+        /* 📲 Tablets */
         @media (min-width: 481px) and (max-width: 768px) {
             .container {
                 padding: 30px 25px;
@@ -108,20 +94,14 @@
 <body>
     <div class="container">
         <h1>🔢 Descubra algo incrível com um número!</h1>
-        <p class="descricao">Escolha o tipo de curiosidade, digite um número ou data, e surpreenda-se com um fato interessante!</p>
-
-        <div class="filtro">
-            <label for="tipo">🧠 Tipo:</label>
-            <select id="tipo">
-                <option value="date" selected>Data</option>
-                <option value="trivia">Curiosidade</option>
-                <option value="math">Matemática</option>
-                <option value="year">Ano</option>
-                <option value="random">Aleatório</option>
-            </select>
-        </div>
-
-        <input type="text" id="entrada" placeholder="Ex: 20/02">
+        <select id="tipo">
+            <option value="trivia">Curiosidade</option>
+            <option value="math">Matemática</option>
+            <option value="date">Data</option>
+            <option value="year">Ano</option>
+            <option value="random">Aleatório</option>
+        </select>
+        <input type="text" id="entrada" placeholder="Digite um número ou deixe em branco">
         <button onclick="buscarFato()">Buscar Fato 🎯</button>
         <div id="resultado"></div>
     </div>
